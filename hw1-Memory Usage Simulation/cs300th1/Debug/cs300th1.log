@@ -1,17 +1,22 @@
-﻿Build started 11/16/2020 4:00:07 PM.
-     1>Project "C:\Users\Jankat\Documents\Visual Studio 2012\Projects\cs300th1\cs300th1.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/28/2020 5:11:21 PM.
+     1>Project "G:\Documents\GitHub\Data-Structures-Homeworks\hw1-Memory Usage Simulation\cs300th1\cs300th1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt my_heap.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt grading.cpp my_heap.cpp mymain.cpp
          my_heap.cpp
-     1>c:\users\jankat\documents\visual studio 2012\projects\cs300th1\my_heap.cpp(385): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\jankat\documents\visual studio 2012\projects\cs300th1\my_heap.cpp(109): warning C4715: 'My_heap::first_fit_allocate' : not all control paths return a value
-     1>c:\users\jankat\documents\visual studio 2012\projects\cs300th1\my_heap.cpp(201): warning C4715: 'My_heap::first_fit_split_allocate' : not all control paths return a value
+     1>g:\documents\github\data-structures-homeworks\hw1-memory usage simulation\cs300th1\my_heap.cpp(388): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         grading.cpp
+         Generating Code...
+     1>g:\documents\github\data-structures-homeworks\hw1-memory usage simulation\cs300th1\my_heap.cpp(109): warning C4715: 'My_heap::first_fit_allocate' : not all control paths return a value
+     1>g:\documents\github\data-structures-homeworks\hw1-memory usage simulation\cs300th1\my_heap.cpp(201): warning C4715: 'My_heap::first_fit_split_allocate' : not all control paths return a value
+         Skipping... (no relevant changes detected)
+         mymain.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jankat\Documents\Visual Studio 2012\Projects\cs300th1\Debug\cs300th1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jankat\Documents\Visual Studio 2012\Projects\cs300th1\Debug\cs300th1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jankat\Documents\Visual Studio 2012\Projects\cs300th1\Debug\cs300th1.lib" /MACHINE:X86 Debug\mymain.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Documents\GitHub\Data-Structures-Homeworks\hw1-Memory Usage Simulation\cs300th1\Debug\cs300th1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Documents\GitHub\Data-Structures-Homeworks\hw1-Memory Usage Simulation\cs300th1\Debug\cs300th1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Documents\GitHub\Data-Structures-Homeworks\hw1-Memory Usage Simulation\cs300th1\Debug\cs300th1.lib" /MACHINE:X86 Debug\grading.obj
+         Debug\mymain.obj
          Debug\my_heap.obj
-         cs300th1.vcxproj -> C:\Users\Jankat\Documents\Visual Studio 2012\Projects\cs300th1\Debug\cs300th1.exe
-     1>Done Building Project "C:\Users\Jankat\Documents\Visual Studio 2012\Projects\cs300th1\cs300th1.vcxproj" (Build target(s)).
+         cs300th1.vcxproj -> G:\Documents\GitHub\Data-Structures-Homeworks\hw1-Memory Usage Simulation\cs300th1\Debug\cs300th1.exe
+     1>Done Building Project "G:\Documents\GitHub\Data-Structures-Homeworks\hw1-Memory Usage Simulation\cs300th1\cs300th1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.87
+Time Elapsed 00:00:02.69

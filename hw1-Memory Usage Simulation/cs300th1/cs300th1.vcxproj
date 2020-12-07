@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="grading.cpp" />
     <ClCompile Include="mymain.cpp" />
     <ClCompile Include="my_heap.cpp" />
   </ItemGroup>

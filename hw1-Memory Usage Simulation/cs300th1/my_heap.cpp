@@ -31,7 +31,7 @@ My_heap::~My_heap()
 
 memory_block*My_heap::bump_allocate(int num_bytes)
 {
-	if (heap_begin == nullptr) // if the heap is empty
+	if (heap_begin == nullptr && num_bytes <= MAX_CAPACITY) // if the heap is empty ---- first changed line for regrade
 	{
 		memory_block*block = new memory_block();
 		block->size = num_bytes;
@@ -202,15 +202,107 @@ memory_block*My_heap::first_fit_split_allocate(int num_bytes)
 
 void My_heap::deallocate(memory_block* block_address)
 {
-	used_bytes = used_bytes - block_address->size;
-	if (block_address->left == nullptr && block_address ->right == nullptr)
+	if (block_address != nullptr) // added this if block after regrade option, this line and the scopes = 3 lines.
 	{
-		block_address->used = false; // if its the only block
-	}
-	else if (block_address == heap_begin)
-	{		
-		if (block_address->right->used == false) // in case the right block is a free block.
-		{	
+		used_bytes = used_bytes - block_address->size;
+		if (block_address->left == nullptr && block_address ->right == nullptr)
+		{
+			block_address->used = false; // if its the only block
+		}
+		else if (block_address == heap_begin)
+		{		
+			if (block_address->right->used == false) // in case the right block is a free block.
+			{	
+				memory_block * rightptr = block_address->right;
+				block_address->size += rightptr->size;
+				block_address->finishing_adress = rightptr->finishing_adress; // initialize finishing adress of right because it comes last when we merge.
+				if (rightptr->right != nullptr)  // making right connections before combining.
+				{			
+					block_address->right->right->left = block_address;
+					block_address->right = block_address->right->right;
+				}
+				else
+				{
+					block_address->right = nullptr;
+					blk = block_address; // since there is no block at right, it makes it the blk.
+				}
+				delete rightptr;
+			
+			}
+			block_address->used = false;
+		}
+		else if (block_address == blk)
+		{
+			memory_block * leftptr = block_address->left;
+			if (block_address->left->used == false) // in case the left block is a free block.
+			{			
+				block_address->size += leftptr->size;
+				block_address->starting_address = leftptr->starting_address; // initialize starting adress of left because it comes first when we merge.
+				if (leftptr->left != nullptr) 
+				{
+					leftptr->left->right = block_address; // connecting the left pointer before combining 
+					block_address->left = leftptr->left;			
+				}
+				else
+				{
+					block_address->left = nullptr;
+					heap_begin = block_address; // since there is no block at left, it makes this the heap_begin.
+				}
+				delete leftptr;			
+			}
+			block_address->used = false;
+		}
+		else if (block_address->left->used == false && block_address->right == false) // in case if block is in between two used=false blocks.
+		{
+			memory_block * leftptr = block_address->left;
+			memory_block * rightptr = block_address->right;
+			block_address->size += block_address->right->size + block_address->left->size; // adding the sizes of the blocks.
+			block_address->starting_address = leftptr->starting_address; // initialize starting adress of left because it comes first when we merge.
+			block_address->finishing_adress = rightptr->finishing_adress; // initialize finishing adress of right because it comes last when we merge.
+			if (leftptr->left != nullptr) 
+			{
+				leftptr->left->right = block_address; // connecting the left pointer before combining 
+				block_address->left = leftptr->left;			
+			}
+			else
+			{
+				block_address->left = nullptr;
+				heap_begin = block_address; // since there is no block at left, it makes this the heap_begin.
+			}
+			if (rightptr->right != nullptr)  // making right connections before combining.
+			{			
+				block_address->right->right->left = block_address;
+				block_address->right = block_address->right->right;
+			}
+			else
+			{
+				block_address->right = nullptr;
+				blk = block_address; // since there is no block at right, it makes it the blk.
+			}
+			delete leftptr;
+			delete rightptr;
+			block_address->used = false;
+		}
+		else if (block_address->left->used == false) // in case the left block is a free block.
+		{
+			memory_block * leftptr = block_address->left;
+			block_address->size += leftptr->size;
+			block_address->starting_address = leftptr->starting_address; // initialize starting adress of left because it comes first when we merge.
+			if (leftptr->left != nullptr) 
+			{
+				leftptr->left->right = block_address; // connecting the left pointer before combining 
+				block_address->left = leftptr->left;			
+			}
+			else
+			{
+				block_address->left = nullptr;
+				heap_begin = block_address; // since there is no block at left, it makes this the heap_begin.
+			}
+			delete leftptr;
+			block_address->used = false;
+		}
+		else if (block_address->right->used == false) // in case the right block is a free block.
+		{
 			memory_block * rightptr = block_address->right;
 			block_address->size += rightptr->size;
 			block_address->finishing_adress = rightptr->finishing_adress; // initialize finishing adress of right because it comes last when we merge.
@@ -225,101 +317,12 @@ void My_heap::deallocate(memory_block* block_address)
 				blk = block_address; // since there is no block at right, it makes it the blk.
 			}
 			delete rightptr;
-			
+			block_address->used = false;
 		}
-		block_address->used = false;
-	}
-	else if (block_address == blk)
-	{
-		memory_block * leftptr = block_address->left;
-		if (block_address->left->used == false) // in case the left block is a free block.
-		{			
-			block_address->size += leftptr->size;
-			block_address->starting_address = leftptr->starting_address; // initialize starting adress of left because it comes first when we merge.
-			if (leftptr->left != nullptr) 
-			{
-				leftptr->left->right = block_address; // connecting the left pointer before combining 
-				block_address->left = leftptr->left;			
-			}
-			else
-			{
-				block_address->left = nullptr;
-				heap_begin = block_address; // since there is no block at left, it makes this the heap_begin.
-			}
-			delete leftptr;			
-		}
-		block_address->used = false;
-	}
-	else if (block_address->left->used == false && block_address->right == false) // in case if block is in between two used=false blocks.
-	{
-		memory_block * leftptr = block_address->left;
-		memory_block * rightptr = block_address->right;
-		block_address->size += block_address->right->size + block_address->left->size; // adding the sizes of the blocks.
-		block_address->starting_address = leftptr->starting_address; // initialize starting adress of left because it comes first when we merge.
-		block_address->finishing_adress = rightptr->finishing_adress; // initialize finishing adress of right because it comes last when we merge.
-		if (leftptr->left != nullptr) 
+		else // if there is no free memory around it
 		{
-			leftptr->left->right = block_address; // connecting the left pointer before combining 
-			block_address->left = leftptr->left;			
+			block_address->used = false;
 		}
-		else
-		{
-			block_address->left = nullptr;
-			heap_begin = block_address; // since there is no block at left, it makes this the heap_begin.
-		}
-		if (rightptr->right != nullptr)  // making right connections before combining.
-		{			
-			block_address->right->right->left = block_address;
-			block_address->right = block_address->right->right;
-		}
-		else
-		{
-			block_address->right = nullptr;
-			blk = block_address; // since there is no block at right, it makes it the blk.
-		}
-		delete leftptr;
-		delete rightptr;
-		block_address->used = false;
-	}
-	else if (block_address->left->used == false) // in case the left block is a free block.
-	{
-		memory_block * leftptr = block_address->left;
-		block_address->size += leftptr->size;
-		block_address->starting_address = leftptr->starting_address; // initialize starting adress of left because it comes first when we merge.
-		if (leftptr->left != nullptr) 
-		{
-			leftptr->left->right = block_address; // connecting the left pointer before combining 
-			block_address->left = leftptr->left;			
-		}
-		else
-		{
-			block_address->left = nullptr;
-			heap_begin = block_address; // since there is no block at left, it makes this the heap_begin.
-		}
-		delete leftptr;
-		block_address->used = false;
-	}
-	else if (block_address->right->used == false) // in case the right block is a free block.
-	{
-		memory_block * rightptr = block_address->right;
-		block_address->size += rightptr->size;
-		block_address->finishing_adress = rightptr->finishing_adress; // initialize finishing adress of right because it comes last when we merge.
-		if (rightptr->right != nullptr)  // making right connections before combining.
-		{			
-			block_address->right->right->left = block_address;
-			block_address->right = block_address->right->right;
-		}
-		else
-		{
-			block_address->right = nullptr;
-			blk = block_address; // since there is no block at right, it makes it the blk.
-		}
-		delete rightptr;
-		block_address->used = false;
-	}
-	else // if there is no free memory around it
-	{
-		block_address->used = false;
 	}
 }
 

@@ -21,6 +21,9 @@
     <ClCompile Include="mymain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="grading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="G:\Desktop\my_heap.h">
