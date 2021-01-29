@@ -1,0 +1,509 @@
+///////////////Test 1///////////////////
+
+Ahmet has reserved Konya A1-0
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Found that Kamer has a reservation in Bursa A1-1
+Emre has reserved Konya C1-0 by emptiest block
+Elif has reserved Konya B1-2
+Mehmet has reserved Bursa B2-1
+Reyyan has reserved Bursa B1-3
+Found that Elif has a reservation in Konya B1-2
+
+Konya
+~~~~~~~
+A1 : Ahm --- --- --- --- --- 
+B1 : --- --- Eli --- --- --- 
+C1 : Emr --- --- --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- Kam --- --- --- --- 
+B1 : --- --- --- Rey --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- Meh --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+///////////////Test 2///////////////////
+
+Ahmet has reserved Konya A1-0
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Emre has reserved Konya A1-1 by emptiest block
+Elif has reserved Konya B1-2
+Mehmet has reserved Bursa B2-1
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara C1-2
+Selim has reserved Konya A2-1
+Banu has reserved Bursa A2-2
+Samir has reserved Konya C1-0 by emptiest block
+Cancelled the reservation of Ahmet
+Cancelled the reservation of Reyyan
+Cancelled the reservation of Kamer
+Cancelled the reservation of Emre
+
+Konya
+~~~~~~~
+A1 : --- --- --- --- --- --- 
+B1 : --- --- Eli --- --- --- 
+C1 : Sam --- --- --- --- --- 
+A2 : --- Sel --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- --- --- --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- Ban --- --- --- 
+B2 : --- Meh --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- Fat --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+///////////////Test 3///////////////////
+
+Ahmet has reserved Konya A1-0
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Elif has reserved Konya B1-2
+Mehmet has reserved Bursa B2-1
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara C1-2
+Selim has reserved Konya A2-1
+Banu has reserved Bursa A2-2
+Tahsin has reserved Konya A1-1 by emptiest block
+Samir has reserved Ankara A2-0 by emptiest block
+Nazir has reserved Ankara B1-0 by emptiest block
+Isam has reserved Konya C1-0 by emptiest block
+Taha has reserved Konya C2-0 by emptiest block
+Found that Ahmet has a reservation in Konya A1-0
+Found that Cemal has a reservation in Ankara A1-2
+Found that Samir has a reservation in Ankara A2-0
+Found that Nazir has a reservation in Ankara B1-0
+Cancelled the reservation of Ahmet
+Cancelled the reservation of Reyyan
+Cancelled the reservation of Kamer
+Cancelled the reservation of Fatih
+
+Konya
+~~~~~~~
+A1 : --- Tah --- --- --- --- 
+B1 : --- --- Eli --- --- --- 
+C1 : Isa --- --- --- --- --- 
+A2 : --- Sel --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : Tah --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- --- --- --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- Ban --- --- --- 
+B2 : --- Meh --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : Naz --- --- --- --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : Sam --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+
+///////////////Test 4///////////////////
+
+
+Could not cancel the reservation for Ahmet; no reservation found!
+Could not cancel the reservation for Tahsin; no reservation found!
+Tahsin has reserved Konya A1-0 by emptiest block
+Ahmet could not reserve a seat!
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Samir has reserved Konya A2-0 by emptiest block
+Nazir has reserved Konya B1-0 by emptiest block
+Mehmet has reserved Konya B2-0 by emptiest block
+Isam has reserved Konya C1-0 by emptiest block
+Taha has reserved Konya C2-0 by emptiest block
+Elif has reserved Konya B1-2
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara C1-2
+Selim has reserved Konya A2-1
+Banu has reserved Bursa A2-2
+
+Konya
+~~~~~~~
+A1 : Tah --- --- --- --- --- 
+B1 : Naz --- Eli --- --- --- 
+C1 : Isa --- --- --- --- --- 
+A2 : Sam Sel --- --- --- --- 
+B2 : Meh --- --- --- --- --- 
+C2 : Tah --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- Kam --- --- --- --- 
+B1 : --- --- --- Rey --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- Ban --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- Fat --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+///////////////Test 5///////////////////
+
+There is no reservation made for Ahmet!
+There is no reservation made for Tahsin!
+Tahsin has reserved Konya A1-0 by emptiest block
+Ahmet could not reserve a seat!
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Samir has reserved Konya A2-0 by emptiest block
+Nazir has reserved Konya B1-0 by emptiest block
+Isam has reserved Konya C1-0 by emptiest block
+Taha has reserved Konya C2-0 by emptiest block
+Elif has reserved Konya B1-2
+Mehmet has reserved Bursa B2-1
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara C1-2
+Selim has reserved Konya A2-1
+Banu has reserved Bursa A2-2
+
+Konya
+~~~~~~~
+A1 : Tah --- --- --- --- --- 
+B1 : Naz --- Eli --- --- --- 
+C1 : Isa --- --- --- --- --- 
+A2 : Sam Sel --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : Tah --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- Kam --- --- --- --- 
+B1 : --- --- --- Rey --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- Ban --- --- --- 
+B2 : --- Meh --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- Fat --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+///////////////Test 6///////////////////
+
+Tahsin has reserved Konya A1-0 by emptiest block
+Ahmet could not reserve a seat!
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Samir has reserved Konya A2-0 by emptiest block
+Nazir has reserved Konya B1-0 by emptiest block
+Mehmet has reserved Konya B2-0 by emptiest block
+Isam has reserved Konya C1-0 by emptiest block
+Taha has reserved Konya C2-0 by emptiest block
+Could not cancel the reservation for Ahmet; no reservation found!
+Could not cancel the reservation for Ahmet; no reservation found!
+Cancelled the reservation of Kamer
+Could not cancel the reservation for Kamer; no reservation found!
+Elif has reserved Konya B1-2
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara C1-2
+Cancelled the reservation of Mehmet
+Could not cancel the reservation for Mehmet; no reservation found!
+Cancelled the reservation of Reyyan
+Could not cancel the reservation for Reyyan; no reservation found!
+Selim has reserved Konya A2-1
+Banu has reserved Bursa A2-2
+
+Konya
+~~~~~~~
+A1 : Tah --- --- --- --- --- 
+B1 : Naz --- Eli --- --- --- 
+C1 : Isa --- --- --- --- --- 
+A2 : Sam Sel --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : Tah --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- --- --- --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- Ban --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- Fat --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+///////////////Test 7///////////////////
+
+Ahmet has reserved Konya A1-0
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Samir has reserved Konya A1-4
+Isam has reserved Bursa A1-0 by emptiest block
+Elif has reserved Konya B1-1
+Mehmet has reserved Bursa B1-2
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara B1-4
+Banu has reserved Konya B1-0 by emptiest block
+Abdullah has reserved Konya C1-2
+Abidin has reserved Bursa C1-3
+Adam has reserved Ankara C1-4
+Adnan has reserved Bursa C1-5
+Utku has reserved Konya C1-0 by emptiest block
+Cabbar has reserved Konya A2-0
+Canan has reserved Bursa A2-1
+Cansu has reserved Ankara A2-2
+Cemil has reserved Ankara A2-4
+Suad has reserved Konya A2-1 by emptiest block
+Bahtiyar has reserved Konya B2-1
+Baki has reserved Bursa B2-2
+Bahar has reserved Ankara B2-3
+Barbaros has reserved Bursa B2-4
+Mutaz has reserved Konya B2-0 by emptiest block
+Damla has reserved Konya C2-2
+Defne has reserved Bursa C2-3
+Deha has reserved Ankara C2-4
+Demir has reserved Bursa C2-5
+Fatma has reserved Konya C2-0 by emptiest block
+
+Konya
+~~~~~~~
+A1 : Ahm --- --- --- Sam --- 
+B1 : Ban Eli --- --- --- --- 
+C1 : Utk --- Abd --- --- --- 
+A2 : Cab Sua --- --- --- --- 
+B2 : Mut Bah --- --- --- --- 
+C2 : Fat --- Dam --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : Isa Kam --- --- --- --- 
+B1 : --- --- Meh Rey --- --- 
+C1 : --- --- --- Abi --- Adn 
+A2 : --- Can --- --- --- --- 
+B2 : --- --- Bak --- Bar --- 
+C2 : --- --- --- Def --- Dem 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- Cem --- --- --- 
+B1 : --- --- --- --- Fat --- 
+C1 : --- --- --- --- Ada --- 
+A2 : --- --- Can --- Cem --- 
+B2 : --- --- --- Bah --- --- 
+C2 : --- --- --- --- Deh --- 
+=======
+
+///////////////Test 8///////////////////
+
+Isam has reserved Konya A1-0 by emptiest block
+Banu has reserved Konya B1-0 by emptiest block
+Utku has reserved Konya C1-0 by emptiest block
+Suad has reserved Konya A2-0 by emptiest block
+Mutaz has reserved Konya B2-0 by emptiest block
+Fatma has reserved Konya C2-0 by emptiest block
+Abdullah has reserved Bursa A1-0 by emptiest block
+Adam has reserved Bursa B1-0 by emptiest block
+Bahtiyar has reserved Bursa C1-0 by emptiest block
+Baki has reserved Bursa A2-0 by emptiest block
+Cansu has reserved Bursa B2-0 by emptiest block
+Canan has reserved Bursa C2-0 by emptiest block
+Damla has reserved Ankara A1-0 by emptiest block
+Defne has reserved Ankara B1-0 by emptiest block
+Abidin has reserved Ankara C1-0 by emptiest block
+Cabbar has reserved Ankara A2-0 by emptiest block
+Bahar has reserved Ankara B2-0 by emptiest block
+Demir has reserved Ankara C2-0 by emptiest block
+Cancelled the reservation of Isam
+Cancelled the reservation of Utku
+Cancelled the reservation of Mutaz
+Cancelled the reservation of Abdullah
+Cancelled the reservation of Bahtiyar
+Cancelled the reservation of Cansu
+Cancelled the reservation of Damla
+Cancelled the reservation of Abidin
+Cancelled the reservation of Bahar
+Cancelled the reservation of Demir
+Ebru has reserved Konya A1-2
+Isam has reserved Bursa B1-3
+Utku has reserved Ankara C1-4
+Mutaz has reserved Konya A2-5
+Abdullah has reserved Konya B2-2
+Bahtiyar has reserved Bursa C2-3
+Cansu has reserved Ankara A1-4
+Damla has reserved Konya B1-5
+Abidin has reserved Konya C1-2
+Bahar has reserved Bursa A2-3
+Demir has reserved Ankara B2-4
+Found that Banu has a reservation in Konya B1-0
+Found that Suad has a reservation in Konya A2-0
+Found that Adam has a reservation in Bursa B1-0
+Found that Cabbar has a reservation in Ankara A2-0
+Found that Damla has a reservation in Konya B1-5
+Found that Bahtiyar has a reservation in Bursa C2-3
+
+Konya
+~~~~~~~
+A1 : --- --- Ebr --- --- --- 
+B1 : Ban --- --- --- --- Dam 
+C1 : --- --- Abi --- --- --- 
+A2 : Sua --- --- --- --- Mut 
+B2 : --- --- Abd --- --- --- 
+C2 : Fat --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : --- --- --- --- --- --- 
+B1 : Ada --- --- Isa --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : Bak --- --- Bah --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : Can --- --- Bah --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- --- --- Can --- 
+B1 : Def --- --- --- --- --- 
+C1 : --- --- --- --- Utk --- 
+A2 : Cab --- --- --- --- --- 
+B2 : --- --- --- --- Dem --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+///////////////Test 9///////////////////
+
+Ebru has reserved Konya A1-2
+Isam has reserved Bursa B1-3
+Utku has reserved Ankara C1-4
+Mutaz has reserved Konya A2-5
+Abdullah has reserved Konya B2-2
+Bahtiyar has reserved Bursa C2-3
+Abdullah could not reserve a seat!
+Adam has reserved Konya B1-0 by emptiest block
+Bahtiyar could not reserve a seat!
+Baki has reserved Bursa A2-0 by emptiest block
+Cansu has reserved Bursa B2-0 by emptiest block
+Canan has reserved Konya C2-0 by emptiest block
+Cancelled the reservation of Isam
+Cancelled the reservation of Abdullah
+Cancelled the reservation of Adam
+Could not cancel the reservation for Abdullah; no reservation found!
+Cancelled the reservation of Mutaz
+Cancelled the reservation of Bahtiyar
+Cansu could not reserve a seat!
+Damla has reserved Konya B1-5
+Abidin has reserved Konya C1-2
+Bahar has reserved Bursa A2-3
+Demir has reserved Ankara B2-4
+Erdem has reserved Bursa A1-0 by emptiest block
+Emre has reserved Bursa B1-0 by emptiest block
+Engin has reserved Bursa C1-0 by emptiest block
+Enis has reserved Konya A2-0 by emptiest block
+Emine has reserved Konya B2-0 by emptiest block
+Emel has reserved Bursa C2-0 by emptiest block
+Cancelled the reservation of Cansu
+Cancelled the reservation of Damla
+Cancelled the reservation of Abidin
+Cancelled the reservation of Emel
+Cancelled the reservation of Emre
+Cancelled the reservation of Enis
+
+Konya
+~~~~~~~
+A1 : --- --- Ebr --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- --- --- --- --- 
+A2 : --- --- --- --- --- --- 
+B2 : Emi --- --- --- --- --- 
+C2 : Can --- --- --- --- --- 
+=======
+
+Bursa
+~~~~~~~
+A1 : Erd --- --- --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : Eng --- --- --- --- --- 
+A2 : Bak --- --- Bah --- --- 
+B2 : --- --- --- --- --- --- 
+C2 : --- --- --- --- --- --- 
+=======
+
+Ankara
+~~~~~~~
+A1 : --- --- --- --- --- --- 
+B1 : --- --- --- --- --- --- 
+C1 : --- --- --- --- Utk --- 
+A2 : --- --- --- --- --- --- 
+B2 : --- --- --- --- Dem --- 
+C2 : --- --- --- --- --- --- 
+=======
+

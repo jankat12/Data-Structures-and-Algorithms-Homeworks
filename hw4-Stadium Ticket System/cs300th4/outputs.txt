@@ -1,0 +1,9 @@
+Ahmet has reserved Konya A1-0
+Kamer has reserved Bursa A1-1
+Cemal has reserved Ankara A1-2
+Elif has reserved Konya B1-2
+Mehmet has reserved Bursa B2-1
+Reyyan has reserved Bursa B1-3
+Fatih has reserved Ankara C1-2
+Selim has reserved Konya A2-1
+Banu has reserved Bursa A2-2

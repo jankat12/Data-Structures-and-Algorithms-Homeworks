@@ -1,0 +1,13 @@
+Konya Bursa Ankara
+A1 B1 C1 A2 B2 C2
+6
+reserve_seat Ahmet Konya A1 0
+reserve_seat Kamer Bursa A1 1
+reserve_seat Cemal Ankara A1 2
+get_seat Kamer
+reserve_seat_by_row Emre C1
+reserve_seat Elif Konya B1 2
+reserve_seat Mehmet Bursa B2 1
+reserve_seat Reyyan Bursa B1 3
+get_seat Elif
+print
